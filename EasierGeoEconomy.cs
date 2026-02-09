@@ -16,7 +16,6 @@ namespace GeoMultiplier
         public float smallGeoMultiplier = 1f;
         public float mediumGeoMultiplier = 1f;
         public float largeGeoMultiplier = 1f;
-        public bool roundingMode;
         public bool keepShadeGeo = false;
     }
 
@@ -126,16 +125,7 @@ namespace GeoMultiplier
                             minValue: 0,
                             maxValue: 5,
                             wholeNumbers: false
-                            ),
-                        new HorizontalOption(
-                            name: "Round up or down",
-                            description: "Rounding up means 1.1 gets rounded to 2",
-                            values: new [] { "Round up", "Round down" },
-                            applySetting: index =>
-                            {
-                                GS.roundingMode = index == 0;
-                            },
-                            loadSetting: () => GS.roundingMode ? 0 : 1)
+                            )
                         }
 
             );
@@ -155,8 +145,7 @@ namespace GeoMultiplier
 
         private int Rounding(float value)
         {
-            Log($"Value is : {value}, rounding mode is : {GS.roundingMode}");
-            if (!GS.roundingMode)
+            if (value - (int) value < 0.5)
             {
                 return Mathf.FloorToInt(value);
             }
