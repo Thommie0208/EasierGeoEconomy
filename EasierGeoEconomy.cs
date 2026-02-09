@@ -36,10 +36,8 @@ namespace GeoMultiplier
         public void AddGeo(On.HeroController.orig_AddGeo orig, HeroController self, int amount)
         {
 
-            Log($"Vanilla added amount: {amount}");
             if (amount == 1)
             {
-                Log($"multiplied is {amount * GS.smallGeoMultiplier * GS.generalMultiplier}, small multiplier: {GS.smallGeoMultiplier}, overal multiplier: {GS.generalMultiplier}");
                 orig(self, Rounding(amount * GS.smallGeoMultiplier * GS.generalMultiplier));
             }
             else if (amount == 5)

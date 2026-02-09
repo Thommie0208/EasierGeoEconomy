@@ -8,11 +8,11 @@
     <!--<DocumentationFile>$(OutputPath)/$(AssemblyTitle).xml</DocumentationFile>-->
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>GeoMultiplier</RootNamespace>
-    <AssemblyName>GeoMultiplier</AssemblyName>
+    <RootNamespace>EasierGeoEconomy</RootNamespace>
+    <AssemblyName>EasierGeoEconomy</AssemblyName>
     <TargetFramework>net472</TargetFramework>
-    <AssemblyTitle>GeoMultiplier</AssemblyTitle>
-    <Product>GeoMultiplier</Product>
+    <AssemblyTitle>EasierGeoEconomy</AssemblyTitle>
+    <Product>EasierGeoEconomy</Product>
     <Description>A Hollow Knight Mod</Description>
     <Copyright>Copyright ©  2026</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
